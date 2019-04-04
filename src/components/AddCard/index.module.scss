@@ -1,0 +1,16 @@
+.addCardWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background: #ffccc9cc;
+}
+
+.addCardForm {
+  margin: 40px;
+  background: #ffccc9;
+  width: 500px;
+  min-height: 500px;
+}

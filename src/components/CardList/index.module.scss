@@ -1,6 +1,7 @@
 .cardsWrapper {
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 
 .cardsContainer {
@@ -9,4 +10,19 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+}
+
+.addCard {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 236px;
+  height: 236px;
+  background: linear-gradient(#ff8ebd, #ffd2c1);
+  margin: 4px;
+  padding: 8px;
+  cursor: pointer;
+  img {
+    width: 100px;
+  }
 }
