@@ -7,7 +7,6 @@ class App extends Component {
     return (
       <div className={styles.App}>
         <CardList teachables={teachables} />
-        Learn React
       </div>
     );
   }

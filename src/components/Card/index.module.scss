@@ -9,4 +9,7 @@
   margin: 4px;
   padding: 8px;
   cursor: pointer;
+  &:hover {
+    transform: scale(1.1);
+  }
 }
