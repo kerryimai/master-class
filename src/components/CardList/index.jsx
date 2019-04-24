@@ -1,21 +1,17 @@
-import React, { useState } from "react";
+import React from "react";
 import styles from "./index.module.scss";
 import Card from "../Card";
 import plus from "../../plus.svg";
-import AddCard from "../AddCard";
 
-const CardList = ({ teachables }) => {
-  const [showForm, setShowFormState] = useState(false);
-  const handleAddFormClick = () => setShowFormState(!showForm);
+const CardList = ({ teachables, handleAddFormClick }) => {
   return (
     <div className={styles.cardsWrapper}>
-      <AddCard showForm={showForm} toggleAddCard={handleAddFormClick} />
       <div className={styles.cardsContainer}>
         <div className={styles.addCard} onClick={handleAddFormClick}>
           <img src={plus} alt="plusSign" />
         </div>
         {teachables.map(item => (
-          <Card {...item} />
+          <Card {...item} key={item.skill} />
         ))}
       </div>
     </div>

@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import styles from "./index.module.scss";
-const AddCard = ({ showForm = false, toggleAddCard }) => {
+import closeBtn from "../../close.svg";
+
+const AddCard = ({ showForm = false, toggleAddCard, handleSetTeachable }) => {
   const [name, setName] = useState("");
   const [skill, setSkill] = useState("");
   const [email, setEmail] = useState("");
@@ -9,11 +11,17 @@ const AddCard = ({ showForm = false, toggleAddCard }) => {
     e.stopPropagation();
   };
 
+  const createTask = () => {
+    handleSetTeachable({ name, skill, email });
+    toggleAddCard();
+  };
+
   return (
     showForm && (
       <div className={styles.addCardWrapper} onClick={toggleAddCard}>
         <div className={styles.overlay} />
         <div className={styles.addCardForm} onClick={handleFormClick}>
+          <img className={styles.closeBtn} src={closeBtn} alt="close" />
           <h1>My name is</h1>
           {/* Inline functions in react hook does not impact performance
           https://reactjs.org/docs/hooks-faq.html#are-hooks-slow-because-of-creating-functions-in-render */}
@@ -38,6 +46,10 @@ const AddCard = ({ showForm = false, toggleAddCard }) => {
             value={email}
             onChange={e => setEmail(e.target.value)}
           />
+
+          <div className={styles.createBtn} onClick={createTask}>
+            Create
+          </div>
         </div>
       </div>
     )

@@ -2,10 +2,10 @@ import React from "react";
 import styles from "./index.module.scss";
 
 const randomHSL = () => {
-  return "hsl(" + parseInt(360 * Math.random()) + "," + "70%," + "85%,1)";
+  return "hsl(" + parseInt(360 * Math.random()) + ", 70%, 85%,1)";
 };
 
-const Card = ({ name, email, title }) => {
+const Card = ({ name, email, skill }) => {
   const color = randomHSL();
   const color2 = randomHSL();
   return (
@@ -14,7 +14,7 @@ const Card = ({ name, email, title }) => {
       style={{ background: `linear-gradient(${color}, ${color2})` }}
     >
       I can teach you
-      <h1>{title}</h1>
+      <h1>{skill}</h1>
       <div>{name}</div>
       <div>{email}</div>
     </div>
