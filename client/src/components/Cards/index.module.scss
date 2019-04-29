@@ -1,0 +1,38 @@
+.mainContainer {
+  text-align: center;
+  height: 100vh;
+  background-image: url("./palms.jpg");
+  background-size: cover;
+  position: sticky;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+
+  .mainBanner {
+    width: 320px;
+    height: 80px;
+    font-size: 40px;
+    padding-top: 20px;
+    img {
+      width: 256px;
+    }
+  }
+  .category {
+    border-right: 1px solid gray;
+    width: 240px;
+    background: linear-gradient(#ffffff, #ffafc5);
+    color: #6b6b6b;
+    font-size: 28px;
+    font-weight: 600;
+  }
+
+  .header {
+    margin-bottom: 20px;
+    display: flex;
+    width: 100%;
+    position: relative;
+    justify-content: space-between;
+    background: white;
+  }
+}
